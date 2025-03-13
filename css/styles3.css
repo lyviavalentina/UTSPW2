@@ -1,0 +1,239 @@
+/* styles2.css - Extended CSS for All Courses Page */
+:root {
+    --primary: #4361ee; /* Warna utama */
+    --primary-light: #4cc9f0; /* Warna utama yang lebih terang */
+    --secondary: #3f37c9; /* Warna sekunder */
+    --background: #f8f9fa; /* Warna latar belakang */
+    --white: #ffffff; /* Warna putih */
+    --text: #2b2d42; /* Warna teks */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow dasar */
+    --neumorphism-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff; /* Efek Neumorphism */
+}
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding-bottom: 60px; /* Sesuaikan dengan tinggi navbar */
+}
+
+.content {
+    padding-bottom: 60px; /* Hindari konten tertutup oleh navbar */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    background: var(--white);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Filter Chips */
+.filter-chips {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.chip {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chip.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(67, 97, 238, 0.2);
+}
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.course-img {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-img .material-icons {
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-tag {
+    font-size: 0.875rem;
+    color: var(--text);
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.course-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.course-instructor {
+    font-size: 0.875rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .chip {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Bottom Navigation Container */
+.bottom-nav {
+    position: fixed; /* Tetap di bagian bawah layar */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white); /* Latar belakang putih */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Shadow di bagian atas */
+    display: flex;
+    justify-content: space-around; /* Membagi ruang secara merata */
+    padding: 0.75rem 0; /* Padding atas dan bawah */
+    z-index: 1000; /* Pastikan di atas elemen lain */
+}
+
+/* Navigation Item */
+.nav-item {
+    display: flex;
+    flex-direction: column; /* Ikon di atas, teks di bawah */
+    align-items: center;
+    text-decoration: none;
+    color: var(--text); /* Warna teks default */
+    padding: 0.5rem 1rem; /* Padding untuk area klik */
+    border-radius: 12px; /* Sudut melengkung */
+    transition: all 0.3s ease; /* Animasi transisi */
+    background: var(--white); /* Latar belakang putih */
+    box-shadow: var(--neumorphism-shadow); /* Efek Neumorphism */
+}
+
+/* Active Navigation Item */
+.nav-item.active {
+    color: var(--primary); /* Warna teks saat aktif */
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%); /* Gradien saat aktif */
+    box-shadow: 0 4px 6px rgba(67, 97, 238, 0.2); /* Shadow saat aktif */
+}
+
+/* Ikon dan Teks saat Aktif */
+.nav-item.active .nav-icon,
+.nav-item.active span {
+    color: var(--white); /* Warna putih saat aktif */
+}
+
+/* Hover Effect */
+.nav-item:hover {
+    transform: translateY(-5px); /* Naik sedikit saat dihover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow lebih besar saat dihover */
+}
+
+/* Ikon Material */
+.nav-icon {
+    font-size: 1.5rem; /* Ukuran ikon */
+    margin-bottom: 0.25rem; /* Jarak antara ikon dan teks */
+    color: var(--text); /* Warna ikon default */
+    transition: color 0.3s ease; /* Animasi perubahan warna */
+}
+
+/* Teks Navigasi */
+.nav-item span {
+    font-size: 0.875rem; /* Ukuran teks */
+    font-weight: 500; /* Ketebalan teks */
+    color: var(--text); /* Warna teks default */
+    transition: color 0.3s ease; /* Animasi perubahan warna */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bottom-nav {
+        padding: 0.5rem 0; /* Padding lebih kecil untuk mobile */
+    }
+
+    .nav-item {
+        padding: 0.5rem; /* Padding lebih kecil untuk mobile */
+    }
+
+    .nav-icon {
+        font-size: 1.25rem; /* Ukuran ikon lebih kecil untuk mobile */
+    }
+
+    .nav-item span {
+        font-size: 0.75rem; /* Ukuran teks lebih kecil untuk mobile */
+    }
+}

@@ -1,0 +1,248 @@
+/* CSS Variables */
+:root {
+    --primary: #4361ee;
+    --primary-light: #4cc9f0;
+    --secondary: #3f37c9;
+    --text: #2b2d42;
+    --background: #f8f9fa;
+    --white: #ffffff;
+    --success: #4caf50;
+    --error: #f44336;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  /* Login Container */
+  .app-frame {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .login-screen {
+    padding: 2rem;
+  }
+  
+  /* Login Card */
+  .login-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .login-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .login-logo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 2rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Form Elements */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+  }
+  
+  .form-control::placeholder {
+    color: #adb5bd;
+  }
+  
+  .form-group .material-icons {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+    transition: color 0.3s ease;
+  }
+  
+  .form-control:focus + .material-icons {
+    color: var(--primary);
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: var(--white);
+    box-shadow: var(--shadow);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(67, 97, 238, 0.2);
+  }
+  
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+  
+  /* Utility Classes */
+  .divider {
+    text-align: center;
+    position: relative;
+    margin: 1rem 0;
+    color: #adb5bd;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #e9ecef;
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  /* Footer Links */
+  .login-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .login-footer a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .login-footer a:hover {
+    color: var(--primary);
+  }
+  
+  /* Error/Success Messages */
+  .error-message {
+    background: var(--error);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    animation: slideIn 0.3s ease;
+  }
+  
+  .success-message {
+    background: var(--success);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    animation: slideIn 0.3s ease;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .app-frame {
+      border-radius: 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+  
+    .login-screen {
+      padding: 3rem;
+    }
+    
+    .login-logo h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* Neumorphic Effects */
+  .form-control {
+    box-shadow: inset 3px 3px 6px #d1d9e6, 
+                inset -3px -3px 6px #ffffff;
+  }
+  
+  .btn {
+    box-shadow: 3px 3px 6px #d1d9e6, 
+               -3px -3px 6px #ffffff;
+    transition: all 0.2s ease;
+  }
+  
+  .btn:active {
+    box-shadow: inset 3px 3px 6px #d1d9e6, 
+                inset -3px -3px 6px #ffffff;
+  }

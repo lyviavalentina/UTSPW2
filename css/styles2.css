@@ -1,0 +1,533 @@
+/* styles2.css - Extended CSS for Course Detail Page */
+:root {
+    --primary: #4361ee; /* Warna utama */
+    --primary-light: #4cc9f0; /* Warna utama yang lebih terang */
+    --secondary: #3f37c9; /* Warna sekunder */
+    --background: #f8f9fa; /* Warna latar belakang */
+    --white: #ffffff; /* Warna putih */
+    --text: #2b2d42; /* Warna teks */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow dasar */
+    --neumorphism-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff; /* Efek Neumorphism */
+}
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px; /* Sesuaikan dengan tinggi navbar */
+}
+body {
+    padding-bottom: 60px; /* Sesuaikan dengan tinggi navbar */
+}
+
+.content {
+    padding-bottom: 60px; /* Hindari konten tertutup oleh navbar */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.back-button, .share-button {
+    color: var(--text);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover, .share-button:hover {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.course-hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.course-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.course-image .material-icons {
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.course-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.course-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Course Actions */
+.course-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.progress-container {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.progress-text {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--background);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(67, 97, 238, 0.2);
+}
+
+/* Course Description */
+.course-description {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.course-description p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+/* Instructor Section */
+.instructor-section {
+    margin-bottom: 2rem;
+}
+
+.instructor-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.instructor-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.instructor-info {
+    flex: 1;
+}
+
+.instructor-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.instructor-bio {
+    font-size: 0.875rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+/* Course Content Section */
+.course-content-section {
+    margin-bottom: 2rem;
+}
+
+.materials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.material-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.material-item.unlocked {
+    background: var(--background);
+}
+
+.material-order {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.material-info {
+    flex: 1;
+}
+
+.material-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.material-meta {
+    font-size: 0.875rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.material-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.material-action {
+    color: var(--text);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.material-action.available {
+    color: var(--primary);
+}
+
+.material-action.locked {
+    cursor: not-allowed;
+}
+
+.material-action:hover:not(.locked) {
+    color: var(--primary);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.close-modal {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--primary);
+}
+
+.student-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.student-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.student-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.student-info {
+    flex: 1;
+}
+
+.student-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.student-email {
+    font-size: 0.875rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.student-date {
+    font-size: 0.75rem;
+    color: var(--text);
+    opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .course-title {
+        font-size: 1.5rem;
+    }
+
+    .course-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .course-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .progress-container {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .instructor-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .material-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .material-action {
+        margin-top: 1rem;
+    }
+}
+/* styles2.css - Bottom Navigation */
+:root {
+    --primary: #4361ee; /* Warna utama */
+    --primary-light: #4cc9f0; /* Warna utama yang lebih terang */
+    --white: #ffffff; /* Warna latar belakang */
+    --text: #2b2d42; /* Warna teks */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow dasar */
+    --neumorphism-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff; /* Efek Neumorphism */
+}
+
+/* Bottom Navigation Container */
+.bottom-nav {
+    position: fixed; /* Tetap di bagian bawah layar */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white); /* Latar belakang putih */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Shadow di bagian atas */
+    display: flex;
+    justify-content: space-around; /* Membagi ruang secara merata */
+    padding: 0.75rem 0; /* Padding atas dan bawah */
+    z-index: 1000; /* Pastikan di atas elemen lain */
+}
+
+/* Navigation Item */
+.nav-item {
+    display: flex;
+    flex-direction: column; /* Ikon di atas, teks di bawah */
+    align-items: center;
+    text-decoration: none;
+    color: var(--text); /* Warna teks default */
+    padding: 0.5rem 1rem; /* Padding untuk area klik */
+    border-radius: 12px; /* Sudut melengkung */
+    transition: all 0.3s ease; /* Animasi transisi */
+    background: var(--white); /* Latar belakang putih */
+    box-shadow: var(--neumorphism-shadow); /* Efek Neumorphism */
+}
+
+/* Active Navigation Item */
+.nav-item.active {
+    color: var(--primary); /* Warna teks saat aktif */
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%); /* Gradien saat aktif */
+    box-shadow: 0 4px 6px rgba(67, 97, 238, 0.2); /* Shadow saat aktif */
+}
+
+/* Ikon dan Teks saat Aktif */
+.nav-item.active .nav-icon,
+.nav-item.active span {
+    color: var(--white); /* Warna putih saat aktif */
+}
+
+/* Hover Effect */
+.nav-item:hover {
+    transform: translateY(-5px); /* Naik sedikit saat dihover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow lebih besar saat dihover */
+}
+
+/* Ikon Material */
+.nav-icon {
+    font-size: 1.5rem; /* Ukuran ikon */
+    margin-bottom: 0.25rem; /* Jarak antara ikon dan teks */
+    color: var(--text); /* Warna ikon default */
+    transition: color 0.3s ease; /* Animasi perubahan warna */
+}
+
+/* Teks Navigasi */
+.nav-item span {
+    font-size: 0.875rem; /* Ukuran teks */
+    font-weight: 500; /* Ketebalan teks */
+    color: var(--text); /* Warna teks default */
+    transition: color 0.3s ease; /* Animasi perubahan warna */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bottom-nav {
+        padding: 0.5rem 0; /* Padding lebih kecil untuk mobile */
+    }
+
+    .nav-item {
+        padding: 0.5rem; /* Padding lebih kecil untuk mobile */
+    }
+
+    .nav-icon {
+        font-size: 1.25rem; /* Ukuran ikon lebih kecil untuk mobile */
+    }
+
+    .nav-item span {
+        font-size: 0.75rem; /* Ukuran teks lebih kecil untuk mobile */
+    }
+}
