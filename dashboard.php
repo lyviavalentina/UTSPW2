@@ -73,7 +73,9 @@ function get_course_bg_style($category) {
     <link rel="stylesheet" href="css/styles1.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <body>
     <div class="container">
         <div id="app" class="app-frame">
@@ -92,6 +94,42 @@ function get_course_bg_style($category) {
                                 <span class="material-icons search-icon">search</span>
                                 <input type="text" class="search-input" placeholder="Search for courses...">
                             </div>
+                            <div class="carousel-container mb-4">
+    <div id="eduCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-3">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="Gambar 1.png" class="d-block w-100" alt="EduLearn 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Welcome to EduLearn</h3>
+                    <p>Start your learning journey with us</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="Gambar 1.jpg" class="d-block w-100" alt="EduLearn 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="Gambar 3.png" class="d-block w-100" alt="EduLearn 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Interactive Courses</h3>
+                    <p>Engaging and practical learning materials</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#eduCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#eduCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+                        
                             
                             <div class="filter-chips">
                                 <div class="chip active">All</div>
