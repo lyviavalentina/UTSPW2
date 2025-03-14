@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Mar 2025 pada 17.04
+-- Waktu pembuatan: 14 Mar 2025 pada 17.47
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -48,7 +48,8 @@ INSERT INTO `courses` (`course_id`, `course_name`, `description`, `instructor_id
 (3, 'English Grammar Basics', 'Learn the fundamentals of English grammar', 2, 'Language', 'SD', 6, '2025-03-13 06:41:48'),
 (4, 'Biology: Cell Structure', 'Explore the structure and function of cells', 3, 'Science', 'SMA', 1, '2025-03-13 06:41:48'),
 (5, 'Indonesian History', 'Learn about the rich history of Indonesia', 2, 'Social Studies', 'SMA', 3, '2025-03-13 06:41:48'),
-(6, 'Creative Writing', 'Develop skills in creative writing and storytelling', 3, 'Language', 'SMP', 2, '2025-03-13 06:41:48');
+(6, 'Creative Writing', 'Develop skills in creative writing and storytelling', 3, 'Language', 'SMP', 2, '2025-03-13 06:41:48'),
+(8, 'Chemistry in Life 1', 'kimia dasar', 8, 'Science', 'SMA', 3, '2025-03-14 07:59:22');
 
 -- --------------------------------------------------------
 
@@ -102,7 +103,11 @@ INSERT INTO `registrations` (`registration_id`, `user_id`, `course_id`, `registr
 (5, 5, 1, '2025-03-13 10:24:49', 0),
 (6, 5, 3, '2025-03-13 11:33:14', 0),
 (7, 5, 2, '2025-03-13 14:35:16', 0),
-(8, 5, 4, '2025-03-13 14:37:45', 0);
+(8, 5, 4, '2025-03-13 14:37:45', 0),
+(10, 8, 3, '2025-03-14 07:57:42', 0),
+(11, 9, 1, '2025-03-14 15:50:41', 0),
+(12, 9, 4, '2025-03-14 15:52:08', 0),
+(13, 9, 8, '2025-03-14 15:52:08', 0);
 
 -- --------------------------------------------------------
 
@@ -127,7 +132,11 @@ INSERT INTO `users` (`user_id`, `full_name`, `email`, `password`, `registration_
 (2, 'Lyvia Valentina', 'valentinalyvia@gmail.com', '$2y$10$dPwxlyYVw6.urr4N8/bcYuW0C67C2feAF/YlHDpJL.i3QBmYzVelW', '2025-03-13 06:41:39'),
 (3, 'Gaozhan', 'gaozhan@gmail.com', '$2y$10$dPwxlyYVw6.urr4N8/bcYuW0C67C2feAF/YlHDpJL.i3QBmYzVelW', '2025-03-13 06:41:39'),
 (4, 'Lyvia Valentina', 'lyvia@gmail.com', '$2y$10$pz8RBn2hygDxJFydY5mfX.XLrNFuE5idg6buX.mR/XTyPzKpljSh6', '2025-03-13 06:46:47'),
-(5, 'Anggita', 'anggitashfr@gmail.com', '$2y$10$OC0E8H1WSIfnB2QSEkNUeO18AUx4Xiy4Wa6MY9I1YfhZL2IvxhnDC', '2025-03-13 06:47:41');
+(5, 'Anggita', 'anggitashfr@gmail.com', '$2y$10$OC0E8H1WSIfnB2QSEkNUeO18AUx4Xiy4Wa6MY9I1YfhZL2IvxhnDC', '2025-03-13 06:47:41'),
+(6, 'Leiden Fauzi Yoka', 'leiden@gmail.com', '$2y$10$uajoiShRcbs6RSkFnbTOv.Uklv18K1RpHDCIDUQYJqQut0A6H8C6q', '2025-03-14 07:25:54'),
+(7, 'Lyvia Valentina', 'valentina@gmail.com', '$2y$10$RLcbQfiz5J9tX86Bhr.O..SNMftqSlXpRWmu8nORT8F3b/xWAoxR.', '2025-03-14 07:56:07'),
+(8, 'Lyvia', 'lyvia123@gmail.com', '$2y$10$UUa0MZt8IOGcBi5ZjZcF5O0hnMIgatP9pX5l/0Z7mLgrtkcGjm/iu', '2025-03-14 07:56:50'),
+(9, 'Lyvia Gaozhan Anggita', 'LyviaGaozhanAnggita@gmail.com', '$2y$10$0H2Cx15feaC.CUv2KaNCqOUEdoiO3NnztDUVHBoMA7zKAvJt.cvCm', '2025-03-14 15:48:42');
 
 --
 -- Indexes for dumped tables
@@ -170,7 +179,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `course_materials`
@@ -182,13 +191,13 @@ ALTER TABLE `course_materials`
 -- AUTO_INCREMENT untuk tabel `registrations`
 --
 ALTER TABLE `registrations`
-  MODIFY `registration_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `registration_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
